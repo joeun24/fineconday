@@ -16,7 +16,7 @@ st.markdown("""
 (서울 영등포구 여의나루로 67-8)  
 지하철 이용 시: 여의도역(5, 9호선) 4번 출구 이용
 """)
-st.image("image/map.jpg", caption="", use_column_width=True)
+st.image("image/map.png", caption="", use_column_width=True)
 
 
 
