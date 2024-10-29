@@ -38,18 +38,21 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 버튼 배치 컨테이너
-st.markdown('<div class="button-container">', unsafe_allow_html=True)
+col1, col2, col3 = st.columns(3)
 
 # 버튼 1: 강좌신청 확인
-if st.button("강좌신청 확인"):
+with col1:
+  if st.button("강좌신청 확인하기"):
     webbrowser.open_new_tab("https://241109.streamlit.app/roll")
 
 # 버튼 2: 오픈채팅방
-if st.button("오픈채팅방"):
+with col2:
+  if st.button("오픈채팅방 입장하기"):
     webbrowser.open_new_tab("https://open.kakao.com/o/g141aCVg")
 
 # 버튼 3: 연수후기
-if st.button("연수후기"):
+with col3:
+  if st.button("연수후기 남기기"):
     webbrowser.open_new_tab("https://bit.ly/econo1109")
 
 # 버튼 배치 컨테이너 닫기
