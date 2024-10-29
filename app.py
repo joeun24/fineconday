@@ -2,13 +2,6 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 
-map_html = """
-<iframe 
-    src="https://map.naver.com/p/entry/place/12092826?c=16.41,0,0,0,dh"
-    width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-"""
-
 
 # 페이지 제목
 st.title("경제금융교육연구회")
@@ -23,10 +16,8 @@ st.markdown("""
 (서울 영등포구 여의나루로 67-8)  
 지하철 이용 시: 여의도역(5, 9호선) 4번 출구 이용
 """)
+st.image("image/map.jpg", caption="", use_column_width=True)
 
-
-# HTML로 Google Maps 표시
-st.components.v1.html(map_html, height=500)
 
 
 st.markdown("""
@@ -38,6 +29,5 @@ st.markdown("""
 전체 교안과 PPT는 따로 제공되지 않습니다.
 """)
 
-image_path = "image/1.jpg"
-st.image(image_path, caption="연수안내", use_column_width=True)
+st.image("image/1.jpg", caption="연수안내", use_column_width=True)
 
