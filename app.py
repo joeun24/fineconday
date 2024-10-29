@@ -1,12 +1,11 @@
 import streamlit as st
 import altair as alt
 import pandas as pd
-import webbrowser
-
-
 
 # 페이지 제목
 st.title("경제금융교육연구회")
+
+# CSS 스타일 추가
 st.markdown("""
     <style>
         /* 버튼 스타일 */
@@ -17,9 +16,9 @@ st.markdown("""
             margin-bottom: 40px;
         }
         
-        .stButton > button {
+        .button-link {
             background-color: #4c6ef5;
-            color: white;
+            color: white !important;
             border: none;
             border-radius: 10px;
             padding: 10px 20px;
@@ -27,36 +26,42 @@ st.markdown("""
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
         }
 
-        .stButton > button:hover {
+        .button-link:hover {
             background-color: #3b5cc6;
-            color: #f1f1f1;
-            transform: scale(1.05);
+            color: #f1f1f1 !important;
         }
     </style>
 """, unsafe_allow_html=True)
 
-# 버튼 배치 컨테이너
+# 3개의 열 생성
 col1, col2, col3 = st.columns(3)
 
-# 버튼 1: 강좌신청 확인
+# 버튼 1: 강좌신청 확인 (현재 탭에서 열림)
 with col1:
-  if st.button("강좌신청 확인하기"):
-    webbrowser.open_new_tab("https://241109.streamlit.app/roll")
+    st.markdown(
+        '<a class="button-link" href="https://241109.streamlit.app/roll" target="_self">강좌신청 확인하기</a>',
+        unsafe_allow_html=True
+    )
 
-# 버튼 2: 오픈채팅방
+# 버튼 2: 오픈채팅방 (새 탭에서 열림)
 with col2:
-  if st.button("오픈채팅방 입장하기"):
-    webbrowser.open_new_tab("https://open.kakao.com/o/g141aCVg")
+    st.markdown(
+        '<a class="button-link" href="https://open.kakao.com/o/g141aCVg" target="_blank">오픈채팅방 입장하기</a>',
+        unsafe_allow_html=True
+    )
 
-# 버튼 3: 연수후기
+# 버튼 3: 연수후기 (새 탭에서 열림)
 with col3:
-  if st.button("연수후기 남기기"):
-    webbrowser.open_new_tab("https://bit.ly/econo1109")
-
-# 버튼 배치 컨테이너 닫기
-st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<a class="button-link" href="https://bit.ly/econo1109" target="_blank">연수후기 남기기</a>',
+        unsafe_allow_html=True
+    )
 
 # 오프연수회 일시 및 장소 섹션
 st.header("📅 오프연수회 일시 및 장소")
@@ -70,8 +75,6 @@ st.markdown("""
 """)
 st.image("image/map.png", caption="", use_column_width=True)
 
-
-
 st.markdown("""
 ✅ **점심 식사**  
 참가 확정 후 희망하는 분에 한해 도시락 및 근처 식당 예약을 받을 예정입니다.
@@ -83,4 +86,3 @@ st.markdown("""
 
 st.image("image/1.jpg", caption="연수안내", use_column_width=True)
 st.image("image/2.png", caption="연수안내", use_column_width=True)
-
