@@ -3,6 +3,12 @@ import altair as alt
 import pandas as pd
 
 # 페이지 제목
+st.set_page_config(
+    page_title="경제금융교육연구회",         # 페이지 제목
+    page_icon="image/pre.png",        # 파비콘 파일 경로 (예: image 폴더 안에 favicon.ico)
+    layout="wide"                         # 레이아웃 설정
+)
+
 st.title("경제금융교육연구회")
 
 # CSS 스타일 추가
