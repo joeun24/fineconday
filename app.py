@@ -58,7 +58,7 @@ with col1:
 # 버튼 2: 오픈채팅방 (새 탭에서 열림)
 with col2:
     st.markdown(
-        '<a class="button-link" href="https://open.kakao.com/o/g141aCVg" target="_blank">오픈채팅방 입장하기👨🏻‍💻</a>',
+        '<a class="button-link" href="https://open.kakao.com/o/g141aCVg" target="_blank">오픈채팅방 입장👨🏻‍💻</a>',
         unsafe_allow_html=True
     )
 
