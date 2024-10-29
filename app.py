@@ -1,5 +1,14 @@
 import streamlit as st
 import altair as alt
+import pandas as pd
+
+
+# 지도 표시할 위치 데이터 (여의도 예시)
+data = pd.DataFrame({
+    'lat': [37.524056],  # 여의도 위도
+    'lon': [126.926627]  # 여의도 경도
+})
+
 
 # 페이지 제목
 st.title("경제금융교육연구회")
@@ -13,7 +22,11 @@ st.markdown("""
 ✅ **장소**: 전국투자자교육협의회 6, 7층  
 (서울 영등포구 여의나루로 67-8)  
 지하철 이용 시: 여의도역(5, 9호선) 4번 출구 이용
+""")
 
+st.map(data)
+
+st.markdown("""
 ✅ **점심 식사**  
 참가 확정 후 희망하는 분에 한해 도시락 및 근처 식당 예약을 받을 예정입니다.
 
