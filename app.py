@@ -1,10 +1,59 @@
 import streamlit as st
 import altair as alt
 import pandas as pd
+import webbrowser
+
 
 
 # 페이지 제목
 st.title("경제금융교육연구회")
+st.markdown("""
+    <style>
+        /* 버튼 스타일 */
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .stButton > button {
+            background-color: #4c6ef5;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .stButton > button:hover {
+            background-color: #3b5cc6;
+            color: #f1f1f1;
+            transform: scale(1.05);
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# 버튼 배치 컨테이너
+st.markdown('<div class="button-container">', unsafe_allow_html=True)
+
+# 버튼 1: 강좌신청 확인
+if st.button("강좌신청 확인"):
+    webbrowser.open_new_tab("https://241109.streamlit.app/roll")
+
+# 버튼 2: 오픈채팅방
+if st.button("오픈채팅방"):
+    webbrowser.open_new_tab("https://open.kakao.com/o/g141aCVg")
+
+# 버튼 3: 연수후기
+if st.button("연수후기"):
+    webbrowser.open_new_tab("https://bit.ly/econo1109")
+
+# 버튼 배치 컨테이너 닫기
+st.markdown('</div>', unsafe_allow_html=True)
 
 # 오프연수회 일시 및 장소 섹션
 st.header("📅 오프연수회 일시 및 장소")

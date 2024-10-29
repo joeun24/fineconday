@@ -103,6 +103,7 @@ if st.button("조회"):
     
     if not user_data.empty:
         # 신청한 강좌 정보를 테이블 형식으로 출력
+        location = user_data['지역'].iloc[0]
         courses = user_data[['선택 강좌 1', '선택 강좌 2', '선택 강좌 3']].values.flatten()
         course_data = []
 
@@ -124,7 +125,7 @@ if st.button("조회"):
         course_df.index = course_df.index + 1  # 인덱스를 1부터 시작하도록 조정
 
         # 테이블 출력
-        st.write(f"{name}님이 신청한 강좌:")
+        st.write(f"{name}님 ({location})이 신청한 강좌:")
         st.table(course_df.style.set_properties(**{'border-color': '#d0e2f2'}))  # 테두리 색상 추가
     else:
         st.write("해당 정보가 없습니다. 이름과 전화번호 뒷자리를 확인해주세요.")
