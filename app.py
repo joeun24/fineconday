@@ -30,4 +30,5 @@ st.markdown("""
 """)
 
 st.image("image/1.jpg", caption="연수안내", use_column_width=True)
+st.image("image/2.png", caption="연수안내", use_column_width=True)
 
