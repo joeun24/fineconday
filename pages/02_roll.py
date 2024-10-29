@@ -9,7 +9,33 @@ load_dotenv()
 
 # 환경 변수로부터 CSV 파일 경로 가져오기
 CSV_PATH = os.getenv('CSV_FILE_PATH', 'csv/hidden_data.csv')
+st.markdown("""
+    <style>
+        /* 제목과 버튼을 가로로 배치하는 flex 컨테이너 */
+        .title-button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
+        /* "오프연수 홈으로" 버튼 스타일 */
+        .home-button {
+            background-color: #4c6ef5;
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background-color: #3b5cc6;
+            color: #f1f1f1 !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # 강좌 정보 사전
 course_info = {
     "초등형 MBTI 클래시파이 : 웹개발스토리와 감정소진없이 학급경영하기": ("김태림쌤", "미정"),
@@ -39,8 +65,13 @@ def load_data():
 # 데이터 로드
 data = load_data()
 
-# Streamlit UI 구성
-st.title("강좌 신청 조회 및 등록 관리")
+# 제목과 버튼을 가로로 정렬
+st.markdown("""
+    <div class="title-button-container">
+        <h1>강좌 신청 조회 및 등록 관리</h1>
+        <a href="https://241109.streamlit.app" target="_self" class="home-button">오프연수 홈으로</a>
+    </div>
+""", unsafe_allow_html=True)
 
 # 사용자 입력
 name = st.text_input("이름을 입력하세요:")

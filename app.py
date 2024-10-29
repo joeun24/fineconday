@@ -45,21 +45,21 @@ col1, col2, col3 = st.columns(3)
 # 버튼 1: 강좌신청 확인 (현재 탭에서 열림)
 with col1:
     st.markdown(
-        '<a class="button-link" href="https://241109.streamlit.app/roll" target="_self">강좌신청 확인하기</a>',
+        '<a class="button-link" href="https://241109.streamlit.app/roll" target="_self">강좌신청 확인하기🔍</a>',
         unsafe_allow_html=True
     )
 
 # 버튼 2: 오픈채팅방 (새 탭에서 열림)
 with col2:
     st.markdown(
-        '<a class="button-link" href="https://open.kakao.com/o/g141aCVg" target="_blank">오픈채팅방 입장하기</a>',
+        '<a class="button-link" href="https://open.kakao.com/o/g141aCVg" target="_blank">오픈채팅방 입장하기👨🏻‍💻</a>',
         unsafe_allow_html=True
     )
 
 # 버튼 3: 연수후기 (새 탭에서 열림)
 with col3:
     st.markdown(
-        '<a class="button-link" href="https://bit.ly/econo1109" target="_blank">연수후기 남기기</a>',
+        '<a class="button-link" href="https://bit.ly/econo1109" target="_blank">연수후기 남기기🖼</a>',
         unsafe_allow_html=True
     )
 
