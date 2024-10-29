@@ -2,12 +2,12 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 
-
-# 지도 표시할 위치 데이터 (여의도 예시)
-data = pd.DataFrame({
-    'lat': [37.524056],  # 여의도 위도
-    'lon': [126.926627]  # 여의도 경도
-})
+map_html = """
+<iframe 
+    src="https://map.naver.com/p/entry/place/12092826?c=15.87,0,0,0,dh"
+    width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+"""
 
 
 # 페이지 제목
@@ -24,19 +24,9 @@ st.markdown("""
 지하철 이용 시: 여의도역(5, 9호선) 4번 출구 이용
 """)
 
-st.map(data)
-map_html = """
-<iframe 
-    src="https://map.naver.com/p/entry/place/12092826?c=15.87,0,0,0,dh"
-    width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-"""
 
 # HTML로 Google Maps 표시
 st.components.v1.html(map_html, height=500)
-
-
-
 
 
 st.markdown("""
