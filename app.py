@@ -25,6 +25,19 @@ st.markdown("""
 """)
 
 st.map(data)
+map_html = """
+<iframe 
+    src="https://map.naver.com/p/entry/place/12092826?c=15.87,0,0,0,dh"
+    width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+"""
+
+# HTML로 Google Maps 표시
+st.components.v1.html(map_html, height=500)
+
+
+
+
 
 st.markdown("""
 ✅ **점심 식사**  
