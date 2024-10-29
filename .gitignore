@@ -1,1 +1,5 @@
+# CSV 파일 숨기기
+csv/hidden_data.csv
+
+# 환경 변수 파일 숨기기
 .env
